@@ -1,0 +1,119 @@
+.icon-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+
+  &--one-item {
+    .icon-list__item:not(:first-of-type) {
+      display: none;
+    }
+
+    .icon-list__item {
+      margin-bottom: 0;
+    }
+  }
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.icon-list__item {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 250px;
+  margin-bottom: 40px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+
+.icon-list__icon {
+  display: flex;
+  width: 68px;
+  height: 68px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+  border-radius: 50%;
+  background-color: $bg-color-blue;
+
+  &::before {
+    content: '';
+    display: flex;
+    background-repeat: no-repeat;
+  }
+}
+
+.icon-list__item--star {
+  border: 1px solid #e8e9ed;
+}
+
+.icon-list__item--flower .icon-list__icon::before {
+  @include sprite($flower);
+}
+
+.icon-list__item--star .icon-list__icon::before {
+  @include sprite($mark-as-favorite-star);
+}
+
+.icon-list__item--palette .icon-list__icon::before {
+  @include sprite($painter-palette);
+}
+
+.icon-list__title {
+  font-size: 11px;
+  font-weight: 700;
+  color: $text-color-dark;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 25px;
+}
+
+.icon-list__text {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.icon-list__inner-list {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.icon-list__inner-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: '•';
+    display: block;
+    margin-right: 20px;
+    font-weight: 700;
+  }
+}
+
+.icon-list__price {
+  color: $text-color-dark;
+  font-size: 54px;
+  text-align: center;
+
+  &::before {
+    content: '$';
+    display: inline-flex;
+    font-size: 34px;
+    color: #202020;
+  }
+}

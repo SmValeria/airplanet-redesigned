@@ -1,0 +1,9 @@
+include ../data/team
+include ../mixins/cards
+
+section.team
+  h2.section-title.team__header Экипаж
+  +cards({
+    list: team,
+    blockClass: "team__cards"
+  })

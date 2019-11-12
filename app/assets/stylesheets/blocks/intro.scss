@@ -1,0 +1,52 @@
+.intro {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+          linear-gradient(rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%) center/cover no-repeat,
+          url("../images/intro-bg.jpg") center/cover no-repeat;
+}
+
+.intro__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: center bottom;
+  animation: jump 400ms  500ms backwards;
+}
+
+.intro__image {
+  margin-bottom: 30px;
+}
+
+@keyframes jump {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  40%{
+    opacity: 1;
+    transform: translateY(-10%);
+  }
+
+  60%{
+    transform: translateY(0);
+  }
+
+  80%{
+    transform: translateY(-5%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

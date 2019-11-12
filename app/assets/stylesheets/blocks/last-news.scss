@@ -1,0 +1,20 @@
+.last-news__header {
+  margin-bottom: 70px;
+}
+
+.last-news__photo-list {
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.last-news__pagination {
+  justify-content: center;
+}

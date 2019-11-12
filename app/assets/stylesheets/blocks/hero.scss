@@ -1,0 +1,17 @@
+.hero {
+  @include tablets {
+    display: none;
+  }
+}
+
+.hero__container {
+  position: relative;
+  min-height: 300px;
+}
+
+.hero__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: none;
+}

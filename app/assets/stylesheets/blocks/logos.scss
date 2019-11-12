@@ -1,0 +1,40 @@
+.logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &--left .logos__item{
+    justify-content: flex-start;
+
+    @include tablets {
+      justify-content: center;
+    }
+  }
+}
+
+.logos__item {
+  width: calc(100% / 3);
+  min-width: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  @include tablets {
+    width: 50%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.logos__link {
+  filter: grayscale(1);
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}

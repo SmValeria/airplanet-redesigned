@@ -1,0 +1,41 @@
+.sidebar {
+  width: 272px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-right: 20px;
+
+  @include tablets {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: auto;
+  }
+}
+
+.sidebar__menu {
+  align-self: flex-start;
+
+  @include tablets {
+    align-self: center;
+  }
+}
+
+.sidebar__tariffs{
+  padding: 30px 2% 0;
+  border: 1px solid $bg-color-grey;
+  margin-bottom: 25px;
+}
+
+.sidebar__partners{
+  padding: 30px 2% 0;
+  border: 1px solid $bg-color-grey;
+  margin-bottom: 25px;
+}
+
+.sidebar__flack {
+  margin-bottom: 25px;
+}
+
+.sidebar__socials {
+  align-self: center;
+}

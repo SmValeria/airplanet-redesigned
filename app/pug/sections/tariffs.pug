@@ -1,0 +1,11 @@
+include ../data/tariffs-list
+include ../mixins/icon-list
+
+section.tariffs
+  .tariffs__container.container.container--full
+    h2.subtitle.tariffs__header Топ-тариф
+    +icon-list({
+      list: tariffs,
+      blockClass: 'tariffs__icon-list icon-list--one-item',
+      icon: false
+    })

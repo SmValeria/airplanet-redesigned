@@ -1,0 +1,11 @@
+.maincontent__breadcrumbs {
+  margin-bottom: 10px;
+}
+
+.maincontent__menu {
+  margin-bottom: 10px;
+
+  @include tablets {
+    margin-bottom: 40px;
+  }
+}
